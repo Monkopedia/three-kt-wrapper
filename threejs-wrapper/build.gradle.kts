@@ -1,11 +1,28 @@
 plugins {
-    id("kotlin2js")
+    id("kotlin-multiplatform")
 }
 
-//compileKotlin2Js {
-//    kotlinOptions.moduleKind = "umd"
-//}
-
-dependencies {
-    compile("org.jetbrains.kotlin:kotlin-stdlib-js:1.3.21")
+kotlin {
+    js(IR) {
+        browser {
+            webpackTask {
+                output.libraryTarget =
+                    org.jetbrains.kotlin.gradle.targets.js.webpack
+                        .KotlinWebpackOutput.Target.COMMONJS
+            }
+            dceTask {
+                keep += "kotlin.defineModule"
+                keep += "io.ktor.http.Headers"
+                keep += "kotlin.math.pow"
+                println("Adding to $name")
+            }
+        }
+        binaries.executable()
+    }
+    sourceSets["jsMain"].apply {
+        kotlin.srcDir("src/main/kotlin")
+        dependencies {
+            implementation(kotlin("stdlib-js"))
+        }
+    }
 }

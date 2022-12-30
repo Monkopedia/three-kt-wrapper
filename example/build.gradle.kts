@@ -1,26 +1,29 @@
 plugins {
-    id("kotlin2js")
-}
-dependencies {
-    compile(project(":threejs-wrapper"))
-    compile("org.jetbrains.kotlin:kotlin-stdlib-js:1.3.21")
+    id("kotlin-multiplatform")
 }
 
-//val assembleWeb = tasks.create("assembleWeb",  Sync::class) {
-//    configurations["compile"].all {
-//        from(zipTree(absolutePath), {
-//            includeEmptyDirs = false
-//            include { fileTreeElement ->
-//                val path = fileTreeElement.path
-//                path.endsWith(".js") && (path.startsWith("META-INF/resources/") ||
-//                        !path.startsWith("META-INF/"))
-//            }
-//        })
-//    }
-//    from(compileKotlin2Js.destinationDir)
-//    into("${projectDir}/web/js/kt2js")
-//
-//    dependsOn( classes)
-//}
-//
-//tasks["assemble"].dependsOn(assembleWeb)
+kotlin {
+    js(IR) {
+        browser {
+            webpackTask {
+                output.libraryTarget =
+                    org.jetbrains.kotlin.gradle.targets.js.webpack
+                        .KotlinWebpackOutput.Target.COMMONJS
+            }
+            dceTask {
+                keep += "kotlin.defineModule"
+                keep += "io.ktor.http.Headers"
+                keep += "kotlin.math.pow"
+                println("Adding to $name")
+            }
+        }
+        binaries.executable()
+    }
+    sourceSets["jsMain"].apply {
+        kotlin.srcDir("src/main/kotlin")
+        dependencies {
+            implementation(project(":threejs-wrapper"))
+            implementation(kotlin("stdlib-js"))
+        }
+    }
+}
