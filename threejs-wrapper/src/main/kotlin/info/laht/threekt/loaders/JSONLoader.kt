@@ -29,7 +29,7 @@ package info.laht.threekt.loaders
 import info.laht.threekt.core.BufferGeometry
 import info.laht.threekt.core.Object3D
 import info.laht.threekt.materials.Material
-import org.w3c.xhr.XMLHttpRequest
+import web.xhr.XMLHttpRequest
 
 /**
  * A loader for loading objects in JSON format. This uses the FileLoader internally for loading files.
@@ -37,13 +37,14 @@ import org.w3c.xhr.XMLHttpRequest
  * @param manager The loadingManager for the loader to use. Default is THREE.DefaultLoadingManager.
  */
 open external class JSONLoader(
-        manager: LoadingManager = definedExternally
+    manager: LoadingManager = definedExternally
 ) {
 
     /**
      * The loadingManager the loader is using. Default is DefaultLoadingManager.
      */
     var manager: LoadingManager
+
     /**
      * Whether the XMLHttpRequest uses credentials. Default is false.
      */
@@ -56,10 +57,12 @@ open external class JSONLoader(
      * @param onProgress Will be called while load progresses. The argument will be the XMLHttpRequest instance, which contains .total and .loaded bytes.
      * @param onError Will be called when load errors.
      */
-    fun load(url:String,
-             onLoad: (Object3D) -> Unit,
-             onProgress: (XMLHttpRequest) -> Unit = definedExternally,
-             onError: (dynamic) -> Unit = definedExternally)
+    fun load(
+        url: String,
+        onLoad: (Object3D) -> Unit,
+        onProgress: (XMLHttpRequest) -> Unit = definedExternally,
+        onError: (dynamic) -> Unit = definedExternally
+    )
 
     /**
      * Set the base path or URL from which to load files. This can be useful if you are loading many files from the same directory.
@@ -76,6 +79,5 @@ open external class JSONLoader(
      * @param json JSON object to parse.
      * @param texturePath Base path for textures.
      */
-    fun parse(json: Any, texturePath: String) : ParsedObject
-
+    fun parse(json: Any, texturePath: String): ParsedObject
 }

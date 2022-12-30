@@ -44,7 +44,6 @@ open external class ShaderMaterial : Material {
     var morphTargets: Boolean
     var morphNormals: Boolean
 
-
     interface Extensions {
         var derivatives: Boolean
         var fragDepth: Boolean
@@ -52,13 +51,10 @@ open external class ShaderMaterial : Material {
         var shaderTextureLOD: Boolean
     }
 
-
     var extensions: Extensions
 
     var index0AttributeName: String
 
-    override fun clone() : ShaderMaterial
-    fun copy(material: ShaderMaterial) : ShaderMaterial
-
-    
+    override fun clone(): ShaderMaterial
+    fun copy(material: ShaderMaterial): ShaderMaterial
 }

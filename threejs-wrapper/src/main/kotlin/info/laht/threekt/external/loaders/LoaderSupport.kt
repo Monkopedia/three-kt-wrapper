@@ -35,6 +35,4 @@ external object LoaderSupport {
     object LoadedMeshUserOverride
     object ResourceDescriptor
     object PrepData
-
 }
-

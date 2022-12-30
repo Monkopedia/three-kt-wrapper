@@ -37,7 +37,6 @@ open external class SpriteMaterial : Material {
 
     var rotation: Double
 
-    override fun clone() : SpriteMaterial
-    fun copy(material: SpriteMaterial) : SpriteMaterial
-
+    override fun clone(): SpriteMaterial
+    fun copy(material: SpriteMaterial): SpriteMaterial
 }

@@ -23,6 +23,7 @@ kotlin {
         kotlin.srcDir("src/main/kotlin")
         dependencies {
             implementation(kotlin("stdlib-js"))
+            implementation("org.jetbrains.kotlin-wrappers:kotlin-browser:0.0.1-pre.464")
         }
     }
 }

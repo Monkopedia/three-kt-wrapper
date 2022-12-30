@@ -24,7 +24,7 @@
 
 package info.laht.threekt.external.libs
 
-import org.w3c.dom.Node
+import dom.Node
 
 /**
  * https://github.com/mrdoob/stats.js/
@@ -34,5 +34,4 @@ external class Stats {
     val dom: Node
 
     fun update()
-
 }

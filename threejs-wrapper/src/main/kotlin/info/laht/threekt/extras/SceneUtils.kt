@@ -19,7 +19,7 @@ external object SceneUtils {
      * @param geometry The geometry for the set of materials.
      * @param materials The materials for the object.
      */
-    fun createMultiMaterialObject(geometry: BufferGeometry, materials: List<Material>) : Group
+    fun createMultiMaterialObject(geometry: BufferGeometry, materials: List<Material>): Group
 
     /**
      * Detaches the object from the parent and adds it back to the scene without moving in worldspace. B
@@ -39,5 +39,4 @@ external object SceneUtils {
      * @param scene The parent to detach the object from.
      */
     fun attach(child: Object3D, parent: Object3D, scene: Scene)
-
 }

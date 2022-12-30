@@ -36,8 +36,6 @@ open external class Plane {
 
     fun set(normal: Vector3, constant: Number)
 
-    fun clone() : Plane
-    fun copy(plane: Plane) : Plane
-
+    fun clone(): Plane
+    fun copy(plane: Plane): Plane
 }
-

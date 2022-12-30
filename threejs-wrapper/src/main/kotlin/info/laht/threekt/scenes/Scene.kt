@@ -50,12 +50,12 @@ open external class Scene : Object3D {
      * When it isn't, then you have to maintain all matrices in the scene yourself.
      */
     var autoUpdate: Boolean
+
     /**
      * If not null, sets the background used when rendering the scene, and is always rendered first.
      * Can be set to a Color which sets the clear color, a Texture covering the canvas, or a CubeTexture. Default is null.
      */
     var background: dynamic
 
-    fun copy(source: Scene, recursive: Boolean = definedExternally) : Scene
-
+    fun copy(source: Scene, recursive: Boolean = definedExternally): Scene
 }

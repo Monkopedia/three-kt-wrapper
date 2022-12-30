@@ -15,9 +15,8 @@ import info.laht.threekt.scenes.Scene
 import info.laht.threekt.objects.Mesh
 import info.laht.threekt.renderers.WebGLRenderer
 import info.laht.threekt.renderers.WebGLRendererParams
-import org.w3c.dom.Element
-import kotlin.browser.document
-import kotlin.browser.window
+import kotlinx.browser.document
+import kotlinx.browser.window
 
 class LoaderTest {
 

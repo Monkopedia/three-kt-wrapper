@@ -33,7 +33,7 @@ open external class Loader {
 
     object Handlers {
         fun add(regex: String, loader: Loader)
-        fun get(file: dynamic) : Loader
+        fun get(file: dynamic): Loader
     }
 
     var onLoadStart: () -> Unit
@@ -41,5 +41,4 @@ open external class Loader {
     var onLoadComplete: () -> Unit
 
     var crossOrigin: String?
-
 }

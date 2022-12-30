@@ -32,5 +32,4 @@ import info.laht.threekt.materials.Material
 open external class LineLoop : Line {
 
     constructor(geometry: BufferGeometry, material: Material)
-
 }

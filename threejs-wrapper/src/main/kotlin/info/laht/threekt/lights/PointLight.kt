@@ -27,8 +27,8 @@
 package info.laht.threekt.lights
 
 open external class PointLight(
-        color: Int = definedExternally,
-        intensity: Number = definedExternally
+    color: Int = definedExternally,
+    intensity: Number = definedExternally
 ) : Light {
 
     var distance: Double
@@ -36,7 +36,5 @@ open external class PointLight(
 
     var shadow: LightShadow
 
-    fun copy(source: PointLight) : PointLight
-
+    fun copy(source: PointLight): PointLight
 }
-

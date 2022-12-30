@@ -32,5 +32,4 @@ open external class EventDispatcher {
     fun hasEventListener(type: String, listener: (dynamic) -> Unit)
     fun removeEventListener(type: String, listener: (dynamic) -> Unit)
     fun dispatchEvent(event: dynamic)
-
 }

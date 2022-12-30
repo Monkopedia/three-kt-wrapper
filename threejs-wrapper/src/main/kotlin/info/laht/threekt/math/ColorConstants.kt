@@ -22,7 +22,6 @@
  * THE SOFTWARE.
  */
 
-
 package info.laht.threekt.math
 
 object ColorConstants {
@@ -160,7 +159,7 @@ object ColorConstants {
     val papayawhip = 0xFFEFD5
     val peachpuff = 0xFFDAB9
     val
-            peru = 0xCD853F
+    peru = 0xCD853F
     val pink = 0xFFC0CB
     val plum = 0xDDA0DD
     val powderblue = 0xB0E0E6
@@ -198,6 +197,4 @@ object ColorConstants {
     val whitesmoke = 0xF5F5F5
     val yellow = 0xFFFF00
     val yellowgreen = 0x9ACD32
-
-
 }

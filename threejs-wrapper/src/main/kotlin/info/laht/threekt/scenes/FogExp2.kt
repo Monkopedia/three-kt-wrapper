@@ -36,8 +36,6 @@ open external class FogExp2 {
     var color: Color
     var density: Double
 
-    fun clone() : FogExp2
-    fun toJSON() : dynamic
-
+    fun clone(): FogExp2
+    fun toJSON(): dynamic
 }
-

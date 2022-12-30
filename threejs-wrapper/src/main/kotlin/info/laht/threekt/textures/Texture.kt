@@ -28,7 +28,7 @@ package info.laht.threekt.textures
 
 import info.laht.threekt.math.Matrix3
 import info.laht.threekt.math.Vector2
-import org.w3c.dom.Element
+import dom.Element
 
 /**
  * Create a texture to apply to a surface or as a reflection or refraction map.
@@ -40,17 +40,18 @@ open external class Texture {
         var DEFAULT_MAPPING: Int
     }
 
-    constructor(image: Element = definedExternally,
-                mapping: Int = definedExternally,
-                wrapS: Int = definedExternally,
-                wrapT: Int = definedExternally,
-                magFilter: Int = definedExternally,
-                minFilter: Int = definedExternally,
-                format: Int = definedExternally,
-                type: Int = definedExternally,
-                anisotropy: Int = definedExternally,
-                encoding: Int = definedExternally)
-
+    constructor(
+        image: Element = definedExternally,
+        mapping: Int = definedExternally,
+        wrapS: Int = definedExternally,
+        wrapT: Int = definedExternally,
+        magFilter: Int = definedExternally,
+        minFilter: Int = definedExternally,
+        format: Int = definedExternally,
+        type: Int = definedExternally,
+        anisotropy: Int = definedExternally,
+        encoding: Int = definedExternally
+    )
 
     /**
      * This starts at 0 and counts how many times # .needsUpdate is set to true.
@@ -71,6 +72,7 @@ open external class Texture {
      * Optional name of the object (doesn't need to be unique). Default is an empty string.
      */
     var name: String
+
     /**
      * An image object, typically created using the TextureLoader.load method. This can be any image (e.g., PNG, JPG, GIF, DDS)
      * or video (e.g., MP4, OGG/OGV) type supported by three.js.
@@ -87,7 +89,7 @@ open external class Texture {
 
     /**
      * How the image is applied to the object. An object type of THREE.UVMapping is the default, where the U,V coordinates are used to apply the map.
-    See the texture constants page for other mapping types.
+     See the texture constants page for other mapping types.
      */
     var mapping: Int
 
@@ -98,6 +100,7 @@ open external class Texture {
      * See the texture constants page for details.
      */
     var wrapS: Int
+
     /**
      * This defines how the texture is wrapped vertically and corresponds to V in UV mapping.
      * The same choices are available as for # .wrapS .
@@ -115,6 +118,7 @@ open external class Texture {
      * See the texture constants page for details.
      */
     var magFilter: Int
+
     /**
      * How the texture is sampled when a texel covers less than one pixel.
      * The default is THREE.LinearMipMapLinearFilter, which uses mipmapping and a trilinear filter.
@@ -136,6 +140,7 @@ open external class Texture {
      * See the texture constants page for details of other formats.
      */
     var format: Int
+
     /**
      * This must correspond to the .format. The default is THREE.UnsignedByteType, which will be used for most texture formats.
      *
@@ -150,6 +155,7 @@ open external class Texture {
      * (e.g. the aoMap or lightMap of most stock materials), those UVs must be manually assigned to achieve the desired offset.
      */
     var offset: Vector2
+
     /**
      * How many times the texture is repeated across the surface, in each direction U and V.
      * If repeat is set greater than 1 in either direction, the corresponding Wrap parameter should
@@ -160,11 +166,13 @@ open external class Texture {
      * achieve the desired repetiton.
      */
     var repeat: Vector2
+
     /**
      * Indicates where the center of rotation is.
      * To rotate around the center point set this value to (0.5, 0.5). Default value is (0.0, 0.0).
      */
     var center: Vector2
+
     /**
      * How much the texture is rotated around the center point, in radians. Postive values are counter-clockwise. Default is 0.
      */
@@ -175,6 +183,7 @@ open external class Texture {
      * True by default. Set this to false if you are specifying the uv-transform matrix directly.
      */
     var matrixAutoUpdate: Boolean
+
     /**
      * The uv-transform matrix for the texture. Updated by the renderer from the texture properties .offset, .repeat, and .rotation
      * when the texture's .matrixAutoUpdate property is true.
@@ -187,15 +196,18 @@ open external class Texture {
      * Set this to false if you are creating mipmaps manually.
      */
     open var generateMipmaps: Boolean
+
     /**
      * False by default, which is the norm for PNG images.
      * Set to true if the RGB values have been stored premultiplied by alpha.
      */
     var premultiplyAlpha: Boolean
+
     /**
      * True by default. Flips the image's Y axis to match the WebGL texture coordinate space
      */
     open var flipY: Boolean
+
     /**
      * 4 by default. Specifies the alignment requirements for the start of each pixel row in memory.
      * The allowable values are 1 (byte-alignment), 2 (rows aligned to even-numbered bytes),
@@ -204,7 +216,6 @@ open external class Texture {
      * See glPixelStorei for more information.
      */
     var unpackAlignment: Int
-
 
     /**
      * THREE.LinearEncoding is the default. See the texture constants page for details of other formats.
@@ -229,9 +240,8 @@ open external class Texture {
      */
     fun transformUv(uv: Vector2)
 
-    fun clone() : Texture
-    fun copy(texture: Texture) : Texture
+    fun clone(): Texture
+    fun copy(texture: Texture): Texture
 
-    fun toJSON(meta: String) : dynamic
-    
+    fun toJSON(meta: String): dynamic
 }

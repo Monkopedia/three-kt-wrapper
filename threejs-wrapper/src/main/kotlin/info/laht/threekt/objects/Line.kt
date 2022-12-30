@@ -38,7 +38,5 @@ open external class Line : Object3D {
 
     fun raycast(raycaster: Raycaster, intercects: List<Intersect>)
 
-    fun clone() : Line
-
+    fun clone(): Line
 }
-

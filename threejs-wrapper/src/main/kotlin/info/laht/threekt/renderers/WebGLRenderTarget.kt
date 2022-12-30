@@ -51,9 +51,7 @@ open external class WebGLRenderTarget {
     fun setSize(width: Int, height: Int)
 
     fun clone(): WebGLRenderTarget
-    fun copy(source: WebGLRenderTarget) : WebGLRenderTarget
+    fun copy(source: WebGLRenderTarget): WebGLRenderTarget
 
     fun dispose()
-
-
 }

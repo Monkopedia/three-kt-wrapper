@@ -33,8 +33,6 @@ open external class MeshPhysicalMaterial : MeshStandardMaterial {
     var clearCoat: Double
     var clearCoatRoughness: Int
 
-    override fun clone() : MeshPhysicalMaterial
-    fun copy(source: MeshPhysicalMaterial) : MeshPhysicalMaterial
-
+    override fun clone(): MeshPhysicalMaterial
+    fun copy(source: MeshPhysicalMaterial): MeshPhysicalMaterial
 }
-

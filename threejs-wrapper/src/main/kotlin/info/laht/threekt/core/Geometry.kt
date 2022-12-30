@@ -70,39 +70,42 @@ open external class Geometry {
     var groupsNeedUpdate: Boolean
 
     fun applyMatrix(matrix: Matrix4): Geometry
-    fun rotateX(angle: Number) : Geometry
-    fun rotateY(angle: Number) : Geometry
-    fun rotateZ(angle: Number) : Geometry
-    fun translate(x: Number, y: Number, z: Number) : Geometry
+    fun rotateX(angle: Number): Geometry
+    fun rotateY(angle: Number): Geometry
+    fun rotateZ(angle: Number): Geometry
+    fun translate(x: Number, y: Number, z: Number): Geometry
     fun scale(x: Number, y: Number, z: Number): Geometry
-    fun lookAt(vector: Vector3) : Geometry
-    fun fromBufferGeometry(geometry: BufferGeometry) : Geometry
+    fun lookAt(vector: Vector3): Geometry
+    fun fromBufferGeometry(geometry: BufferGeometry): Geometry
     fun addFace(a: Int, b: Int, c: Int, materialIndexOffset: Int = definedExternally)
-    fun center() : Vector3
-    fun normalize() : Geometry
+    fun center(): Vector3
+    fun normalize(): Geometry
     fun computeFaceNormals()
-    fun computeVertexNormals(areaWeighted : Boolean = definedExternally)
+    fun computeVertexNormals(areaWeighted: Boolean = definedExternally)
     fun computeFlatVertexNormals()
     fun computeMorphNormals()
     fun computeLineDistances()
     fun computeBoundingBox()
     fun computeBoundingSphere()
 
-    fun merge(geometry: Geometry, matrix: Matrix4 = definedExternally, materialIndexOffset: Int = definedExternally)
+    fun merge(
+        geometry: Geometry,
+        matrix: Matrix4 = definedExternally,
+        materialIndexOffset: Int = definedExternally
+    )
 
     fun mergeMesh(mesh: Mesh)
 
     fun mergeVertices()
 
-    fun setFromPoint(points: Array<Vector3>) : Geometry
+    fun setFromPoint(points: Array<Vector3>): Geometry
 
     fun sortFacesByMaterialIndex()
 
-    fun toJSON() : Any
+    fun toJSON(): Any
 
-    open fun clone() : Geometry
-    fun copy(geometry: Geometry) : Geometry
+    open fun clone(): Geometry
+    fun copy(geometry: Geometry): Geometry
 
     fun dispose()
-
 }

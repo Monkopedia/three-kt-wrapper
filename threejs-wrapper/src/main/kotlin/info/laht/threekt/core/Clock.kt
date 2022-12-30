@@ -32,7 +32,7 @@ package info.laht.threekt.core
  * @param autoStart (optional) whether to automatically start the clock. Default is true.
  */
 open external class Clock(
-        autoStart: Boolean = definedExternally
+    autoStart: Boolean = definedExternally
 ) {
 
     /**
@@ -44,10 +44,12 @@ open external class Clock(
      * Holds the time at which the clock's start method was last called.
      */
     val startTime: Double
+
     /**
      * Holds the time at which the clock's start, getElapsedTime or getDelta methods were last called.
      */
     val oldTime: Double
+
     /**
      * Keeps track of the total time that the clock has been running.
      */
@@ -67,16 +69,16 @@ open external class Clock(
      * Stops clock and sets oldTime to the current time.
      */
     fun stop()
+
     /**
      * Get the seconds passed since the clock started and sets oldTime to the current time.
      * If autoStart is true and the clock is not running, also starts the clock.
      */
-    fun getElapsedTime() : Double
+    fun getElapsedTime(): Double
 
     /**
      * Get the seconds passed since the time oldTime was set and sets oldTime to the current time.
      * If autoStart is true and the clock is not running, also starts the clock.
      */
-    fun getDelta() : Double
-
+    fun getDelta(): Double
 }

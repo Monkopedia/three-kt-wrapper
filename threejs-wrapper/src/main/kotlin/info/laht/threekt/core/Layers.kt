@@ -53,20 +53,22 @@ open external class Layers {
      * @param layer an integer from 0 to 31.
      */
     fun enable(layer: Int)
+
     /**
      * Toggle membership of layer.
      * @layer - an integer from 0 to 31.
      */
-    fun toggle ( layer: Int )
+    fun toggle(layer: Int)
 
     /**
      * Remove membership of this layer.
      * @layer - an integer from 0 to 31.
      */
-    fun disable ( layer: Int )
+    fun disable(layer: Int)
+
     /**
      * Returns true if this and the passed layers object are members of the same set of layers.
      * @param layers a Layers object
      */
-    fun test ( layers: Int )
+    fun test(layers: Int)
 }

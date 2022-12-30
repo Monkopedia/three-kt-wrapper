@@ -26,7 +26,6 @@
 
 package info.laht.threekt.helpers
 
-import info.laht.threekt.core.BufferGeometry
 import info.laht.threekt.math.Box3
 import info.laht.threekt.objects.LineSegments
 
@@ -37,13 +36,12 @@ import info.laht.threekt.objects.LineSegments
  * @param color (optional) the box's color. Default is 0xffff00.
  */
 open external class Box3Helper(
-        box: Box3,
-        color: Int = definedExternally
+    box: Box3,
+    color: Int = definedExternally
 ) : LineSegments {
 
     /**
      * The Box3 being visualized.
      */
     var box: Box3
-
 }

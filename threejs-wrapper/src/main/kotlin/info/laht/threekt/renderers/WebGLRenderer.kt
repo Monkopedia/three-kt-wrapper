@@ -28,7 +28,7 @@ package info.laht.threekt.renderers
 
 import info.laht.threekt.cameras.Camera
 import info.laht.threekt.scenes.Scene
-import org.w3c.dom.Node
+import dom.Node
 
 open external class WebGLRenderer {
 
@@ -49,9 +49,8 @@ open external class WebGLRenderer {
 
     var physicallyCorrectLights: Boolean
 
-
     var toneMapping: Int
-    var toneMappingExposure: Double;
+    var toneMappingExposure: Double
     var toneMappingWhitePoint: Double
 
     var maxMorphTargets: Int
@@ -62,13 +61,17 @@ open external class WebGLRenderer {
         val y: Int
     }
 
-    fun clear(color: Boolean = definedExternally, depth: Boolean = definedExternally, stencil: Boolean = definedExternally)
+    fun clear(
+        color: Boolean = definedExternally,
+        depth: Boolean = definedExternally,
+        stencil: Boolean = definedExternally
+    )
 
     fun clearColor()
     fun clearDepth()
     fun clearStencil()
 
-    fun getSize() : Size
+    fun getSize(): Size
     fun setSize(width: Int, height: Int, updateStyle: Boolean = definedExternally)
 
     /**
@@ -87,8 +90,12 @@ open external class WebGLRenderer {
      * If forceClear is true, the depth, stencil and color buffers will be cleared before rendering even if the renderer's autoClear property is false.
      * Even with forceClear set to true you can prevent certain buffers being cleared by setting either the autoClearColor, autoClearStencil or autoClearDepth properties to false.
      */
-    fun render(scene: Scene, camera: Camera, renderTarget: dynamic = definedExternally, forceClear: Boolean = definedExternally)
+    fun render(
+        scene: Scene,
+        camera: Camera,
+        renderTarget: dynamic = definedExternally,
+        forceClear: Boolean = definedExternally
+    )
 
     fun setPixelRatio(value: Number)
-
 }

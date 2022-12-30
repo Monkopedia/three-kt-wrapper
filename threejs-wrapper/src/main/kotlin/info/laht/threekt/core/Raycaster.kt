@@ -57,12 +57,11 @@ open external class Raycaster {
     var near: Double
     var far: Double
 
-    fun set(origin: Vector3, direction: Vector3) : Raycaster
+    fun set(origin: Vector3, direction: Vector3): Raycaster
 
     fun setFromCamera(coord: Vector2, camera: Camera)
 
-    fun intersectObject(object3D: Object3D, recursive: Boolean) : List<Intersect>
+    fun intersectObject(object3D: Object3D, recursive: Boolean): List<Intersect>
 
-    fun intersectObjects(objects: List<Object3D>, recursive: Boolean) : List<Intersect>
-
+    fun intersectObjects(objects: List<Object3D>, recursive: Boolean): List<Intersect>
 }

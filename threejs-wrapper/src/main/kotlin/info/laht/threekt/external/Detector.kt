@@ -26,7 +26,7 @@
 
 package info.laht.threekt.external
 
-import org.w3c.dom.Element
+import dom.Element
 
 external object Detector {
 
@@ -35,7 +35,6 @@ external object Detector {
     val workers: Boolean
     val fileapi: Boolean
 
-    fun getWebGLErrorMessage() : Element
+    fun getWebGLErrorMessage(): Element
     fun addGetWebGLMessage(parameters: dynamic)
-
 }

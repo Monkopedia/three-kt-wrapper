@@ -32,7 +32,5 @@ open external class Uniform {
 
     var value: dynamic
 
-    fun clone() : Uniform
-
+    fun clone(): Uniform
 }
-

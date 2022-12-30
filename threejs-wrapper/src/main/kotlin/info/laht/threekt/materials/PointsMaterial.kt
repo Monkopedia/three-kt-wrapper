@@ -38,7 +38,6 @@ open external class PointsMaterial : Material {
     var size: Number
     var sizeAttentuation: Boolean
 
-    override fun clone() : PointsMaterial
-    fun copy(material: PointsMaterial) : PointsMaterial
-
+    override fun clone(): PointsMaterial
+    fun copy(material: PointsMaterial): PointsMaterial
 }

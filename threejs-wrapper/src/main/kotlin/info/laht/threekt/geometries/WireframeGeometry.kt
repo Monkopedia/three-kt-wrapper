@@ -12,5 +12,4 @@ open external class WireframeGeometry : BufferGeometry {
 
     constructor(geometry: Geometry)
     constructor(geometry: BufferGeometry)
-
 }

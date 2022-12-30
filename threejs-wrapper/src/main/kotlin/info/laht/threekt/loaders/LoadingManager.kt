@@ -26,7 +26,7 @@
 
 package info.laht.threekt.loaders
 
-external object DefaultLoadingManager: LoadingManager
+external object DefaultLoadingManager : LoadingManager
 
 /**
  * Handles and keeps track of loaded and pending data. A default global instance of this class is created and
@@ -37,14 +37,14 @@ external object DefaultLoadingManager: LoadingManager
  */
 open external class LoadingManager {
 
-    constructor(onLoad: () -> Unit,
-                onProgress: () -> Unit = definedExternally,
-                onError: () -> Unit = definedExternally)
+    constructor(
+        onLoad: () -> Unit,
+        onProgress: () -> Unit = definedExternally,
+        onError: () -> Unit = definedExternally
+    )
 
     var onStart: () -> Unit
     var onLoad: () -> Unit
     var onProgress: () -> Unit
     var onError: () -> Unit
-
-
 }

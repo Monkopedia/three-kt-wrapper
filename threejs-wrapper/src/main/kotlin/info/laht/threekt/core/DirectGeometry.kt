@@ -37,11 +37,10 @@ open external class DirectGeometry {
     var uvsNeedUpdate: Boolean
     var groupsNeedUpdate: Boolean
 
-    fun computeBoundingBox() : Box3
-    fun computeBoundingSphere() : Sphere
+    fun computeBoundingBox(): Box3
+    fun computeBoundingSphere(): Sphere
 
     fun dispose()
 
     fun fromGeometry(geometry: Geometry)
-
 }

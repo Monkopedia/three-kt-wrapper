@@ -38,6 +38,5 @@ open external class Points : Object3D {
 
     fun raycast(raycaster: Raycaster, intercects: List<Intersect>)
 
-    fun clone() : Points
-
+    fun clone(): Points
 }

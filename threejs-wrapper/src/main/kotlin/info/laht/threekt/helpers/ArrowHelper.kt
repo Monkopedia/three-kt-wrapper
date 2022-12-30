@@ -33,12 +33,12 @@ import info.laht.threekt.objects.Line
 import info.laht.threekt.objects.Mesh
 
 open external class ArrowHelper(
-        dir: Vector3,
-        origin: Vector3,
-        length: Number,
-        color: Int = definedExternally,
-        headLength: Number = definedExternally,
-        headWidth: Number = definedExternally
+    dir: Vector3,
+    origin: Vector3,
+    length: Number,
+    color: Int = definedExternally,
+    headLength: Number = definedExternally,
+    headWidth: Number = definedExternally
 ) : Object3D {
 
     var line: Line
@@ -49,5 +49,4 @@ open external class ArrowHelper(
     fun setLength(length: Number, headLength: Number, headWidth: Number)
 
     fun setColor(color: Color)
-
 }

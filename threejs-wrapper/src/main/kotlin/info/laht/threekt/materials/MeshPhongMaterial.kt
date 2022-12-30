@@ -76,9 +76,6 @@ open external class MeshPhongMaterial : Material {
     var morphTargets: Boolean
     var morphNormals: Boolean
 
-    override fun clone() : MeshPhongMaterial
-    fun copy(source: MeshPhongMaterial) : MeshPhongMaterial
-
-
+    override fun clone(): MeshPhongMaterial
+    fun copy(source: MeshPhongMaterial): MeshPhongMaterial
 }
-

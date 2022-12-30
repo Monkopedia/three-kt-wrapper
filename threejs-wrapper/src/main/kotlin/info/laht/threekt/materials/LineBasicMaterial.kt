@@ -36,7 +36,6 @@ open external class LineBasicMaterial : Material {
     var linecap: String
     var linejoin: String
 
-    override  fun clone() : LineBasicMaterial
-    fun copy(material: LineBasicMaterial) : LineBasicMaterial
-
+    override fun clone(): LineBasicMaterial
+    fun copy(material: LineBasicMaterial): LineBasicMaterial
 }

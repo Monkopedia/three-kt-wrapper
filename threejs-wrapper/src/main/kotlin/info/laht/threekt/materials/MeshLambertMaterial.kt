@@ -62,8 +62,7 @@ open external class MeshLambertMaterial : Material {
     var skinning: Boolean
     var morphTargets: Boolean
     var morphNormals: Boolean
-    
-    override fun clone() : MeshLambertMaterial
-    fun copy(material: MeshLambertMaterial) : MeshLambertMaterial
-    
+
+    override fun clone(): MeshLambertMaterial
+    fun copy(material: MeshLambertMaterial): MeshLambertMaterial
 }

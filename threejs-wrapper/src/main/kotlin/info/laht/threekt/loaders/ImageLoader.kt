@@ -26,8 +26,8 @@
 
 package info.laht.threekt.loaders
 
-import org.w3c.dom.Element
-import org.w3c.xhr.XMLHttpRequest
+import dom.Element
+import web.xhr.XMLHttpRequest
 
 /**
  * A loader for loading an Image. This uses the FileLoader internally
@@ -37,7 +37,7 @@ import org.w3c.xhr.XMLHttpRequest
  *
  */
 open external class ImageLoader(
-        manager: LoadingManager = definedExternally
+    manager: LoadingManager = definedExternally
 ) {
 
     /**
@@ -59,19 +59,20 @@ open external class ImageLoader(
      * @param onProgress Will be called while load progresses. The argument will be the progress event.
      * @param onError Will be called when load errors.
      */
-    fun load(url: String,
-             onLoad: (Element) -> Unit,
-             onProgress: (XMLHttpRequest) -> Unit = definedExternally,
-             onError: (dynamic) -> Unit = definedExternally)
+    fun load(
+        url: String,
+        onLoad: (Element) -> Unit,
+        onProgress: (XMLHttpRequest) -> Unit = definedExternally,
+        onError: (dynamic) -> Unit = definedExternally
+    )
 
     /**
      * Set the .crossOrigin attribute.
      */
-    fun setCrossOrigin(value:String)
+    fun setCrossOrigin(value: String)
 
     /**
      * Set the base path or URL from which to load files. This can be useful if you are loading many models from the same directory.
      */
     fun setPath(path: String)
-
 }

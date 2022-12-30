@@ -26,7 +26,4 @@
 
 package info.laht.threekt.external
 
-external object SimplexNoise {
-
-
-}
+external object SimplexNoise

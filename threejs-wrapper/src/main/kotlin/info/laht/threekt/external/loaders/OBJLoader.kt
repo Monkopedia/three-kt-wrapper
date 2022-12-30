@@ -29,7 +29,7 @@ package info.laht.threekt.external.loaders
 import info.laht.threekt.core.Object3D
 import info.laht.threekt.loaders.LoadingManager
 import info.laht.threekt.objects.Mesh
-import org.w3c.xhr.XMLHttpRequest
+import web.xhr.XMLHttpRequest
 
 /**
  * A loader for loading a .obj resource.
@@ -38,17 +38,17 @@ import org.w3c.xhr.XMLHttpRequest
  * and the faces that make each polygon defined as a list of vertices, and texture vertices.
  */
 open external class OBJLoader(
-        manager: LoadingManager = definedExternally
+    manager: LoadingManager = definedExternally
 ) {
 
-    fun load(url: String,
-             onLoad: (Mesh) -> Unit,
-             onProgress: (XMLHttpRequest) -> Unit = definedExternally,
-             onError: (dynamic) -> Unit = definedExternally)
+    fun load(
+        url: String,
+        onLoad: (Mesh) -> Unit,
+        onProgress: (XMLHttpRequest) -> Unit = definedExternally,
+        onError: (dynamic) -> Unit = definedExternally
+    )
 
     fun setPath(value: String)
 
-    fun parse(text: String) : Object3D
-
+    fun parse(text: String): Object3D
 }
-

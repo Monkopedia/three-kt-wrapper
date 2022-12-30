@@ -32,13 +32,12 @@ import info.laht.threekt.core.Raycaster
 import info.laht.threekt.materials.Material
 
 open external class Sprite(
-        material: Material = definedExternally
+    material: Material = definedExternally
 ) : Object3D {
 
     var material: Material
 
     fun raycast(raycaster: Raycaster, intersects: List<Intersect>)
 
-    fun clone() : Sprite
-
+    fun clone(): Sprite
 }

@@ -11,10 +11,10 @@ import org.khronos.webgl.Float32Array
  * @param interpolation the type of interpolation to use. See Animation Constants for possible values. Default is InterpolateLinear.
  */
 open external class KeyFrameTrack(
-        name: String,
-        times: Array<Number>,
-        values: Array<Number>,
-        interpolation: Int
+    name: String,
+    times: Array<Number>,
+    values: Array<Number>,
+    interpolation: Int
 ) {
 
     companion object {
@@ -28,7 +28,5 @@ open external class KeyFrameTrack(
     /**
      * Returns the interpolation type
      */
-    fun getInterpolation() : Int
-
-
+    fun getInterpolation(): Int
 }

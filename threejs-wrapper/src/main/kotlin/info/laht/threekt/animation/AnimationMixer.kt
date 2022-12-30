@@ -12,16 +12,19 @@ import info.laht.threekt.core.Object3D
  * in the "Next Steps" section of the manual.
  */
 open external class AnimationMixer(
-        root: Object3D
+    root: Object3D
 ) {
 
     var time: Double
     var timeScale: Double
 
-    fun clipAction(clip: AnimationClip, optionalRoot: Object3D = definedExternally) : AnimationClip
-    fun existingAction(clip: AnimationClip, optionalRoot: Object3D = definedExternally) : AnimationClip
+    fun clipAction(clip: AnimationClip, optionalRoot: Object3D = definedExternally): AnimationClip
+    fun existingAction(
+        clip: AnimationClip,
+        optionalRoot: Object3D = definedExternally
+    ): AnimationClip
 
-    fun getRoot() : Object3D
+    fun getRoot(): Object3D
 
     fun stopAllAction()
 
@@ -32,5 +35,4 @@ open external class AnimationMixer(
     fun unchacheRoot(root: Object3D)
 
     fun uncacheAction(clip: AnimationClip, optionalRoot: Object3D)
-
 }

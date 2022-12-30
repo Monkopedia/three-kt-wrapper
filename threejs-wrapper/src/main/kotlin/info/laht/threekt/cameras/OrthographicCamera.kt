@@ -27,12 +27,12 @@
 package info.laht.threekt.cameras
 
 open external class OrthographicCamera(
-        varleft: Int,
-        right: Int,
-        top: Int,
-        bottom: Int,
-        near: Number = definedExternally,
-        far: Number = definedExternally
+    varleft: Int,
+    right: Int,
+    top: Int,
+    bottom: Int,
+    near: Number = definedExternally,
+    far: Number = definedExternally
 ) : Camera {
 
     var zoom: Int
@@ -46,12 +46,9 @@ open external class OrthographicCamera(
     var near: Double
     var far: Double
 
-    fun copy(camera: OrthographicCamera) : OrthographicCamera
+    fun copy(camera: OrthographicCamera): OrthographicCamera
 
     fun setViewOffset(fullwidth: Int, fullHeight: Int, x: Int, y: Int, width: Int, height: Int)
     fun clearViewOffset()
     fun updateProjectionMatrix()
-
-
-
 }

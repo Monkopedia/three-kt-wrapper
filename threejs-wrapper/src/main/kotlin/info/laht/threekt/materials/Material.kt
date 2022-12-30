@@ -34,11 +34,12 @@ open external class Material {
      */
     val id: Int
 
-    var uuid : String
+    var uuid: String
+
     /**
      * Optional name of the object (doesn't need to be unique). Default is an empty string.
      */
-    var name : String
+    var name: String
     var type: String
 
     /**
@@ -54,30 +55,32 @@ open external class Material {
 
     /**
      * Double in the range of 0.0 - 1.0 indicating how transparent the material is. A value of 0.0 indicates fully transparent, 1.0 is fully opaque.
-    If the material's # .transparent property is not set to true, the material will remain fully opaque and this value will only affect its color.
-    Default is 1.0.
+     If the material's # .transparent property is not set to true, the material will remain fully opaque and this value will only affect its color.
+     Default is 1.0.
      */
     var opacity: Double
     var transparent: Boolean
 
     var blendSrc: Int
+
     /**
      * Blending destination. Default is OneMinusSrcAlphaFactor. See the destination factors constants for all possible values.
-    The material's # .blending must be set to CustomBlending for this to have any effect.
+     The material's # .blending must be set to CustomBlending for this to have any effect.
      */
     var blendDst: Int
+
     /**
      * Blending equation to use when applying blending. Default is AddEquation. See the blending equation constants for all possible values.
-    The material's # .blending must be set to CustomBlending for this to have any effect.
+     The material's # .blending must be set to CustomBlending for this to have any effect.
      */
     var blendEquation: Int
     var blendSrcAlpha: Int
+
     /**
      * The tranparency of the .blendDst. Default is null.
      */
     var blendDstAlpha: Int?
     var blendEquationAlpha: Int
-
 
     var depthFunc: Int
     var depthTest: Boolean
@@ -92,6 +95,7 @@ open external class Material {
      */
     var polygonOffset: Boolean
     var polygonOffsetFactor: Number
+
     /**
      * Sets the polygon offset units. Default is 0.
      */
@@ -114,16 +118,14 @@ open external class Material {
 
     /**
      * Specifies that the material needs to be updated at the WebGL level. Set it to true if you made changes that need to be reflected in WebGL.
-    This property is automatically set to true when instancing a new material.
+     This property is automatically set to true when instancing a new material.
      */
     var needsUpdate: Boolean
 
-
     fun toJSON(meta: String = definedExternally): String
 
-    open fun clone() : Material
+    open fun clone(): Material
     fun copy(material: Material): Material
 
     fun dispose()
-
 }

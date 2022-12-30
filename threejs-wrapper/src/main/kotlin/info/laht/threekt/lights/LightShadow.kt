@@ -43,7 +43,7 @@ open external class LightShadow {
 
     var matrix: Matrix4
 
-    fun clone() : LightShadow
-    fun copy(source: LightShadow) : LightShadow
-    fun toJSON() : String
+    fun clone(): LightShadow
+    fun copy(source: LightShadow): LightShadow
+    fun toJSON(): String
 }

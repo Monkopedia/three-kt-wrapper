@@ -30,25 +30,22 @@ import info.laht.threekt.textures.Texture
 
 open external class MeshDepthMaterial : Material {
 
-    var depthPacking : Int
+    var depthPacking: Int
 
-    var skinning : Boolean
-    var morphTargets : Boolean
+    var skinning: Boolean
+    var morphTargets: Boolean
 
-    var map : Texture?
+    var map: Texture?
 
-    var alphaMap : Texture?
+    var alphaMap: Texture?
 
-    var displacementMap : Texture?
-    var displacementScale : Double
-    var displacementBias : Double
+    var displacementMap: Texture?
+    var displacementScale: Double
+    var displacementBias: Double
 
-    var wireframe : Boolean
-    var wireframeLinewidth : Double
+    var wireframe: Boolean
+    var wireframeLinewidth: Double
 
-
-    override fun clone() : MeshDepthMaterial
-    fun copy(material: MeshDepthMaterial) : MeshDepthMaterial
-
-    
+    override fun clone(): MeshDepthMaterial
+    fun copy(material: MeshDepthMaterial): MeshDepthMaterial
 }

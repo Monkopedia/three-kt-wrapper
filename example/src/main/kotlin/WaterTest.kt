@@ -10,8 +10,8 @@ import info.laht.threekt.math.ColorConstants
 import info.laht.threekt.scenes.Scene
 import info.laht.threekt.renderers.WebGLRenderer
 import info.laht.threekt.renderers.WebGLRendererParams
-import kotlin.browser.document
-import kotlin.browser.window
+import kotlinx.browser.document
+import kotlinx.browser.window
 import kotlin.math.PI
 
 data class WaterParameters(

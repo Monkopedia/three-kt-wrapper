@@ -7,7 +7,7 @@ import info.laht.threekt.cameras.Camera
 import info.laht.threekt.loaders.LoadingManager
 import info.laht.threekt.scenes.Scene
 import org.khronos.webgl.ArrayBuffer
-import org.w3c.xhr.XMLHttpRequest
+import web.xhr.XMLHttpRequest
 
 external interface GLTFOnLoadCallback {
     val animations: Array<AnimationClip>
@@ -25,16 +25,18 @@ external interface GLTFOnLoadCallback {
  * skeletons, morph targets, animations, lights, and/or cameras.
  */
 open external class GLTFLoader(
-        manager: LoadingManager = definedExternally
+    manager: LoadingManager = definedExternally
 ) {
 
     /**
      * Begin loading from url and call the callback function with the parsed response content.
      */
-    fun load(url: String,
-             onLoad: (GLTFOnLoadCallback) -> Unit,
-             onProgress: (XMLHttpRequest) -> Unit = definedExternally,
-             onError: (dynamic) -> Unit = definedExternally)
+    fun load(
+        url: String,
+        onLoad: (GLTFOnLoadCallback) -> Unit,
+        onProgress: (XMLHttpRequest) -> Unit = definedExternally,
+        onError: (dynamic) -> Unit = definedExternally
+    )
 
     /**
      * Set the base path for additional resources.
@@ -46,12 +48,21 @@ open external class GLTFLoader(
      * Parse a glTF-based ArrayBuffer and fire onLoad callback when complete.
      * The argument to onLoad will be an object that contains loaded parts: .scene, .scenes, .cameras, and .animations.
      */
-    fun parse(data: ArrayBuffer, path: String, onLoad: (GLTFOnLoadCallback) -> Unit, onError: (dynamic) -> Unit)
+    fun parse(
+        data: ArrayBuffer,
+        path: String,
+        onLoad: (GLTFOnLoadCallback) -> Unit,
+        onError: (dynamic) -> Unit
+    )
 
     /**
      * Parse a glTF-based JSON String and fire onLoad callback when complete.
      * The argument to onLoad will be an object that contains loaded parts: .scene, .scenes, .cameras, and .animations.
      */
-    fun parse(data: String, path: String, onLoad: (GLTFOnLoadCallback) -> Unit, onError: (dynamic) -> Unit)
-
+    fun parse(
+        data: String,
+        path: String,
+        onLoad: (GLTFOnLoadCallback) -> Unit,
+        onError: (dynamic) -> Unit
+    )
 }

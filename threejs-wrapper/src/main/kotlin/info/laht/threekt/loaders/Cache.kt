@@ -39,5 +39,4 @@ external object Cache {
     fun remove(key: String)
 
     fun clear()
-
 }

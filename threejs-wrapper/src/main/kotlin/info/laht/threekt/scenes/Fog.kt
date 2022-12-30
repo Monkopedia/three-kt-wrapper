@@ -36,9 +36,7 @@ open external class Fog {
     var near: Int
     var far: Int
 
-    fun clone() : Fog
+    fun clone(): Fog
 
-    fun toJSON() : dynamic
-
+    fun toJSON(): dynamic
 }
-

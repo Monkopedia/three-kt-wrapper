@@ -26,6 +26,4 @@
 
 package info.laht.threekt.renderers.shaders
 
-external object ShaderLib {
-
-}
+external object ShaderLib

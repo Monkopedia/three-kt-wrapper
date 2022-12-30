@@ -33,5 +33,4 @@ import info.laht.threekt.materials.Material
 open external class LineSegments : Object3D {
 
     constructor(geometry: BufferGeometry, material: Material)
-
 }
